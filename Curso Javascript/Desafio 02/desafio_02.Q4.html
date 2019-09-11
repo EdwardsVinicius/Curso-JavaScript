@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+
+        <div id = "app">
+            <input type="text" name="nome" onfocus="this.value=''">
+            <button onClick="adicionar()" >Adicionar</button>
+        </div>
+        
+        <script>
+
+            function adicionar(){
+                var text = inputElement.value;
+                
+                var itemLista = document.createElement('li');
+                
+                var textElement = document.createTextNode(encontrar(nomes, text));
+                itemLista.appendChild(textElement);
+                
+                listaNomes.appendChild(itemLista);
+                
+            }
+
+            function encontrar(vetor, item){
+                for(var i = 0; i <= vetor.length - 1; i++){
+                    if(vetor[i] == item)
+                        return item;
+                    
+                }
+                return -1;
+            }
+            
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            var listaNomes = document.createElement('ul');
+
+            var containerElement = document.getElementById("app");
+            containerElement.appendChild(listaNomes);
+
+            var buttonElement = document.querySelector('button');
+            var inputElement = document.querySelector('input');
+
+        </script>
+    </body>
+</html>

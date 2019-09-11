@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Curso Javasript</title>
+    </head>
+    <body>
+        <div id = "app">
+
+        </div>
+
+        <script>
+
+            var buttonElement = document.createElement("button");
+            buttonElement.setAttribute('button', 'create box');
+
+            var textElement = document.createTextNode("Press me to create a box");
+            buttonElement.appendChild(textElement);
+
+            var containerElement = document.getElementById("app");
+            containerElement.appendChild(buttonElement);
+
+            buttonElement.onclick = function(){
+                var boxElement  = document.createElement("div");
+                boxElement.setAttribute('class', 'box');
+                containerElement.appendChild(boxElement);
+                
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#f00';
+            }
+
+
+        
+        </script>
+    </body>
+</html>

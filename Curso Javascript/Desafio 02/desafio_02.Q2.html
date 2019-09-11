@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+
+        <div id = "app">
+            
+        </div>
+        
+        <script>
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            var newColor = getRandomColor();
+
+
+            var buttonElement = document.createElement("button");
+
+            var textElement = document.createTextNode("Press me to create a box");
+            buttonElement.appendChild(textElement);
+
+            var containerElement = document.getElementById("app");
+            containerElement.appendChild(buttonElement);
+
+            buttonElement.onclick = function(){
+                var boxElement  = document.createElement("div");
+                boxElement.setAttribute('class', 'box');
+                containerElement.appendChild(boxElement);
+                
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = getRandomColor();
+                boxElement.onmouseover = function(){
+                    boxElement.style.backgroundColor = getRandomColor();
+                }
+            }
+
+        </script>
+    </body>
+</html>

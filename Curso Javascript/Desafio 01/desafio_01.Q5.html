@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Curso Javasript</title>
+    </head>
+    <body>
+        <div id = "app">
+
+        </div>
+
+        <script>
+
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+
+            var joinedString;
+            for(var i = 0; i <= usuarios.length - 1; i++){
+                for(j of usuarios[i].habilidades){
+                    joinedString = usuarios[i].habilidades.join();
+                }
+                console.log(usuarios[i].nome + " possui as habilidades: " +
+                joinedString);
+            }
+
+
+
+
+
+        
+        </script>
+    </body>
+</html>
